@@ -6,3 +6,13 @@
 
 ## building-the-nextjs-9-4-wordpress-example
 https://webdevstudios.com/2020/06/02/building-the-nextjs-9-4-wordpress-example/
+
+- wp local (http)
+```url
+http://localhost:3000/posts/programmer-unit-formation
+```
+
+- wp engine (https)
+```url
+http://localhost:3000/posts/programmer-unit-formation
+```
