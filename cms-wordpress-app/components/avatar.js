@@ -1,3 +1,6 @@
+
+
+
 export default function Avatar({ author }) {
   const name =
     author.firstName && author.lastName
