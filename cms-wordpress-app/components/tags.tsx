@@ -1,7 +1,7 @@
 type TagProps = {
 	tags: {
 		edges: any;
-	};
+	} | any;
 };
 
 export default function Tags({ tags }: TagProps) {

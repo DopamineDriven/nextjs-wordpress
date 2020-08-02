@@ -10,6 +10,7 @@ type PostHeaderProps = {
 	author: any;
 	date: string;
 	categories: any;
+	slug: string | number;
 };
 
 export default function PostHeader({
@@ -17,7 +18,8 @@ export default function PostHeader({
 	coverImage,
 	date,
 	author,
-	categories
+	categories,
+	slug
 }: PostHeaderProps) {
 	return (
 		<>
@@ -26,7 +28,7 @@ export default function PostHeader({
 				<Avatar author={author} />
 			</div>
 			<div className='mb-8 md:mb-16 -mx-5 sm:mx-0'>
-				<CoverImage title={coverImage.title} coverImage={coverImage} slug={coverImage.slug}/>
+				<CoverImage title={coverImage.title} coverImage={coverImage} slug={slug}/>
 			</div>
 			<div className='max-w-2xl mx-auto'>
 				<div className='block md:hidden mb-6'>
