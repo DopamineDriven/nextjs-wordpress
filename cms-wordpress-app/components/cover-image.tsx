@@ -1,9 +1,13 @@
 import cn from 'classnames';
 import Link from 'next/link';
 
+type SourceUrl = {
+	sourceUrl: string;
+};
+
 export type CoverImageProps = {
 	title: string;
-	coverImage: { sourceUrl: string };
+	coverImage: { sourceUrl: string } | any;
 	slug?: string | number;
 };
 
@@ -14,7 +18,7 @@ export default function CoverImage({
 }: CoverImageProps) {
 	const image = (
 		<img
-			src={coverImage?.sourceUrl}
+			src={coverImage ? coverImage.sourceUrl : coverImage}
 			className={cn('shadow-small', {
 				'hover:shadow-medium transition-shadow duration-200': slug
 			})}
