@@ -8,7 +8,7 @@ export default function Avatar({ author }) {
 		<div className='flex items-center'>
 			<img
 				src={author.avatar.url}
-				className='w-12 h-12 rounded-full mr-4'
+				className='w-16 h-16 rounded-full mr-4'
 				alt={nombre}
 			/>
 			<div className='text-xl font-bold'>{nombre}</div>
