@@ -6,8 +6,14 @@ module.exports = {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
+        black: '#000000',
+        white: '#ffffff',
         success: '#0070f3',
         cyan: '#79FFE1',
+        blizzardBlue: '#b3ddf2',
+        chicagoRed: '#ff0000',
+        cimaRed: '#B8242C',
+        wcdPink: '#eb57a3'
       },
       spacing: {
         28: '7rem',
