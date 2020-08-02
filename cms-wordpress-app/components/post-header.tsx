@@ -1,5 +1,5 @@
 import Avatar from './avatar';
-import Date, { DateProps } from './date';
+import Date from './date';
 import CoverImage, { CoverImageProps } from './cover-image';
 import PostTitle from './post-title';
 import Categories from './categories';

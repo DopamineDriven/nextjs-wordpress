@@ -1,7 +1,16 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
+import Avatar from './avatar'
+import Date from './date'
+import CoverImage, { CoverImageProps } from './cover-image'
 import Link from 'next/link'
+
+type HeroPostProps = {
+  coverImage: CoverImageProps;
+  author: any;
+  slug: string | number;
+  excerpt: string;
+  date: string;
+  title: string;
+}
 
 export default function HeroPost({
   title,
@@ -10,11 +19,11 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
-}) {
+}: HeroPostProps) {
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} coverImage={coverImage} slug={slug} />
+      <CoverImage title={coverImage.title} coverImage={coverImage} slug={coverImage.slug}/>
       </div>
       <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
         <div>
