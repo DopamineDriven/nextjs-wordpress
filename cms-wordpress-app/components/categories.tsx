@@ -6,12 +6,12 @@
 // 	}
 // }
 
-export default function Categories({ categories }) {
+export default function Categories({ categories }: any) {
 	return (
 		<span className='ml-1'>
 			under
 			{categories.edges.length > 0 ? (
-				categories.edges.map((category, index) => (
+				categories.edges.map((category: any, index: any) => (
 					<span key={index} className='ml-1'>
 						{category.node.name}
 					</span>

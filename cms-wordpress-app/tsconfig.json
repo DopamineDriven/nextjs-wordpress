@@ -24,6 +24,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "components/categories.jsx", "components/avatar.tsx", "lib/api.js"
+    "**/*.tsx", "components/categories.tsx", "components/avatar.tsx", "lib/api.js"
   ]
 }
