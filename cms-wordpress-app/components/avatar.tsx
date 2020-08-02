@@ -1,4 +1,8 @@
-export default function Avatar({ author }) {
+type AvatarProps = {
+	author: any;
+};
+
+export default function Avatar({ author }: AvatarProps) {
 	const nombre =
 		author.firstName && author.lastName
 			? `${author.firstName} ${author.lastName}`
