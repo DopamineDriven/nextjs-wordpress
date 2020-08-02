@@ -28,7 +28,11 @@ export default function PostHeader({
 				<Avatar author={author} />
 			</div>
 			<div className='mb-8 md:mb-4 -mx-5 sm:mx-0'>
-				<CoverImage title={coverImage.title} coverImage={coverImage} slug={slug}/>
+				<CoverImage
+					title={coverImage.title}
+					coverImage={coverImage}
+					slug={slug}
+				/>
 			</div>
 			<div className='max-w-2xl mx-auto align-middle content-center justified-center text-center'>
 				<div className='block md:hidden mb-6'>
