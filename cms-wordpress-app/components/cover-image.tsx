@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import Link from 'next/link';
 
-type CoverImageProps = {
+export type CoverImageProps = {
 	title: string;
 	coverImage: { sourceUrl: string };
-	slug: string | number;
+	slug?: string | number;
 };
 
 export default function CoverImage({

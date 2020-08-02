@@ -1,14 +1,5 @@
-type Props = {
-	author: {
-		firstName?: string;
-		lastName?: string;
-		name: string;
-		avatar: { url: string };
-	};
-};
-
-export default function Avatar({ author }: Props) {
-	const name =
+export default function Avatar({ author }) {
+	const nombre =
 		author.firstName && author.lastName
 			? `${author.firstName} ${author.lastName}`
 			: author.name;
@@ -18,9 +9,9 @@ export default function Avatar({ author }: Props) {
 			<img
 				src={author.avatar.url}
 				className='w-12 h-12 rounded-full mr-4'
-				alt={name}
+				alt={nombre}
 			/>
-			<div className='text-xl font-bold'>{name}</div>
+			<div className='text-xl font-bold'>{nombre}</div>
 		</div>
 	);
 }
