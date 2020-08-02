@@ -7,16 +7,26 @@ import Layout from '../components/layout';
 import { getAllPostsForHome } from '../lib/api';
 import { CMS_NAME } from '../lib/constants';
 import Header from '../components/header';
-import SearchBox from "../components/search-box";
-import Link from "next/link";
+import SearchBox from '../components/search-box';
+import Link from 'next/link';
 
-export default function Index({ allPosts: { edges }, preview }) {
+interface IndexProps {
+	allPosts: any;
+	preview: boolean;
+	props: string | number;
+}
+
+export default function Index({
+	allPosts: { edges },
+	preview,
+	props
+}: IndexProps) {
 	const heroPost = edges[0]?.node;
 	const morePosts = edges.slice(1);
 
 	return (
 		<>
-			<Header />
+			<Header props={props} />
 			<Layout preview={preview}>
 				<Head>
 					<title>Next.js and {CMS_NAME}</title>
@@ -48,7 +58,11 @@ export default function Index({ allPosts: { edges }, preview }) {
 	);
 }
 
-export async function getStaticProps({ preview = false }) {
+type StaticProps = {
+	preview: boolean;
+};
+
+export async function getStaticProps({ preview = false }: StaticProps) {
 	const allPosts = await getAllPostsForHome(preview);
 	return {
 		props: { allPosts, preview }
